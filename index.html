@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cake Template">
+    <meta name="keywords" content="Cake, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quán bánh ngọt</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<style>
+    #menu li {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    #menu li.active a {
+        font-weight: bold;
+        color: blue;
+    }
+
+    .content-section {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    .content-section{
+        display: none;
+    }
+    .content-section.active {
+        display: block;
+    }
+</style>
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__cart">
+            <div class="offcanvas__cart__links">
+                <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                <a href="#"><img src="img/icon/heart.png" alt=""></a>
+            </div>
+            <div class="offcanvas__cart__item">
+                <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                <div class="cart__price">Cart: <span>$0.00</span></div>
+            </div>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <h1>Little Bread House</h1>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header__top__inner">
+
+                            <div class="header__logo">
+                                <a href="./index.html"><img src="img/logo.png" style="width: 70px;height: 70px" alt=""></a>
+                            </div>
+                            <div class="header__top__right">
+                                <div class="header__top__right__links">
+                                    <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                                    <a href="#"><img src="img/icon/heart.png" alt=""></a>
+                                </div>
+                                <div class="header__top__right__cart">
+                                    <a href="#"><img src="img/icon/cart.png" alt=""> <span>3</span></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open"><i class="fa fa-bars"></i></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li class="active"><a onclick="switchTab('home')" >Trang chủ</a></li>
+                            <li><a  onclick="switchTab('about')">Về chúng tôi</a></li>
+                            <li><a  onclick="switchTab('product')">Sản phẩm</a></li>
+                            <li><a >Thanh toán</a>
+                                <ul class="dropdown">
+                                    <li><a onclick="switchTab('pay')">Giỏ hàng</a></li>
+                                </ul>
+                            </li>
+                            <li><a  onclick="switchTab('blog')">Blog</a></li>
+                            <li><a  onclick="switchTab('contac')">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <div id="home" class="content-section active">
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="hero__slider owl-carousel">
+            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="hero__text">
+                                <h2>Making your life sweeter one bite at a time!</h2>
+                                <a href="#" class="primary-btn">Our cakes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="hero__text">
+                                <h2>Making your life sweeter one bite at a time!</h2>
+                                <a href="#" class="primary-btn">Our cakes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Begin -->
+    <section class="about spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <span>About Cake shop</span>
+                            <h2>Cakes and bakes from the house of Queens!</h2>
+                        </div>
+                        <p>The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are
+                        Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="about__bar">
+                        <div class="about__bar__item">
+                            <p>Cake design</p>
+                            <div id="bar1" class="barfiller">
+                                <div class="tipWrap"><span class="tip"></span></div>
+                                <span class="fill" data-percentage="95"></span>
+                            </div>
+                        </div>
+                        <div class="about__bar__item">
+                            <p>Cake Class</p>
+                            <div id="bar2" class="barfiller">
+                                <div class="tipWrap"><span class="tip"></span></div>
+                                <span class="fill" data-percentage="80"></span>
+                            </div>
+                        </div>
+                        <div class="about__bar__item">
+                            <p>Cake Recipes</p>
+                            <div id="bar3" class="barfiller">
+                                <div class="tipWrap"><span class="tip"></span></div>
+                                <span class="fill" data-percentage="90"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Categories Section Begin -->
+    <div class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="categories__slider owl-carousel">
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-029-cupcake-3"></span>
+                            <h5>Cupcake</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-034-chocolate-roll"></span>
+                            <h5>Butter</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-005-pancake"></span>
+                            <h5>Red Velvet</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-030-cupcake-2"></span>
+                            <h5>Biscuit</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-006-macarons"></span>
+                            <h5>Donut</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item">
+                        <div class="categories__item__icon">
+                            <span class="flaticon-006-macarons"></span>
+                            <h5>Cupcake</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories Section End -->
+
+    <!-- Product Section Begin -->
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Dozen Cupcakes</a></h6>
+                            <div class="product__item__price">$32.00</div>
+                            <div class="cart_add">
+                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-2.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Cookies and Cream</a></h6>
+                            <div class="product__item__price">$30.00</div>
+                            <div class="cart_add">
+                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-3.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Gluten Free Mini Dozen</a></h6>
+                            <div class="product__item__price">$31.00</div>
+                            <div class="cart_add">
+                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-4.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Cookie Dough</a></h6>
+                            <div class="product__item__price">$25.00</div>
+                            <div class="cart_add">
+                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-5.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Vanilla Salted Caramel</a></h6>
+                            <div class="product__item__price">$05.00</div>
+                            <div class="cart_add">
+                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-6.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">German Chocolate</a></h6>
+                            <div class="product__item__price">$14.00</div>
+                            <div class="cart_add">
+                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-7.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Dulce De Leche</a></h6>
+                            <div class="product__item__price">$32.00</div>
+                            <div class="cart_add">
+                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-8.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Mississippi Mud</a></h6>
+                            <div class="product__item__price">$08.00</div>
+                            <div class="cart_add">
+                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+
+    <!-- Class Section Begin -->
+    <section class="class spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="class__form">
+                        <div class="section-title">
+                            <span>Class cakes</span>
+                            <h2>Made from your <br />own hands</h2>
+                        </div>
+                        <form action="#">
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Phone">
+                            <select>
+                                <option value="">Studying Class</option>
+                                <option value="">Writting Class</option>
+                                <option value="">Reading Class</option>
+                            </select>
+                            <input type="text" placeholder="Type your requirements">
+                            <button type="submit" class="site-btn">registration</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="class__video set-bg" data-setbg="img/class-video.jpg">
+                <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
+                class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Class Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7">
+                    <div class="section-title">
+                        <span>Our team</span>
+                        <h2>Sweet Baker </h2>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <div class="team__btn">
+                        <a href="#" class="primary-btn">Join Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team__item set-bg" data-setbg="img/team/team-1.jpg">
+                        <div class="team__item__text">
+                            <h6>Randy Butler</h6>
+                            <span>Decorater</span>
+                            <div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team__item set-bg" data-setbg="img/team/team-2.jpg">
+                        <div class="team__item__text">
+                            <h6>Randy Butler</h6>
+                            <span>Decorater</span>
+                            <div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team__item set-bg" data-setbg="img/team/team-3.jpg">
+                        <div class="team__item__text">
+                            <h6>Randy Butler</h6>
+                            <span>Decorater</span>
+                            <div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team__item set-bg" data-setbg="img/team/team-4.jpg">
+                        <div class="team__item__text">
+                            <h6>Randy Butler</h6>
+                            <span>Decorater</span>
+                            <div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <span>Testimonial</span>
+                        <h2>Our client say</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="testimonial__slider owl-carousel">
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-1.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Kerry D.Silva</h5>
+                                    <span>New york</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star-half_alt"></span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-2.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Kerry D.Silva</h5>
+                                    <span>New york</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star-half_alt"></span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-1.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Ophelia Nunez</h5>
+                                    <span>London</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star-half_alt"></span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-2.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Kerry D.Silva</h5>
+                                    <span>New york</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star-half_alt"></span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-1.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Ophelia Nunez</h5>
+                                    <span>London</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star-half_alt"></span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial__item">
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-2.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Kerry D.Silva</h5>
+                                    <span>New york</span>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star"></span>
+                                <span class="icon_star-half_alt"></span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Instagram Section Begin -->
+    <section class="instagram spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 p-0">
+                    <div class="instagram__text">
+                        <div class="section-title">
+                            <span>Follow us on instagram</span>
+                            <h2>Sweet moments are saved as memories.</h2>
+                        </div>
+                        <h5><i class="fa fa-instagram"></i> @sweetcake</h5>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                            <div class="instagram__pic">
+                                <img src="img/instagram/instagram-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                            <div class="instagram__pic middle__pic">
+                                <img src="img/instagram/instagram-2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                            <div class="instagram__pic">
+                                <img src="img/instagram/instagram-3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                            <div class="instagram__pic">
+                                <img src="img/instagram/instagram-4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                            <div class="instagram__pic middle__pic">
+                                <img src="img/instagram/instagram-5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                            <div class="instagram__pic">
+                                <img src="img/instagram/instagram-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Instagram Section End -->
+</div>
+    <div id="about" class="content-section" >
+
+        <!-- Breadcrumb Begin -->
+        <div class="breadcrumb-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__text">
+                            <h2>Về chúng tôi</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Về chúng tôi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+        <!-- About Section Begin -->
+        <section class="about spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="about__video set-bg" data-setbg="img/about-video.jpg">
+                            <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
+                               class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="about__text">
+                            <div class="section-title">
+                                <span>About Cake shop</span>
+                                <h2>Cakes and bakes from the house of Queens!</h2>
+                            </div>
+                            <p>The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are
+                                Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="about__bar">
+                            <div class="about__bar__item">
+                                <p>Cake design</p>
+                                <div id="bar4" class="barfiller">
+                                    <div class="tipWrap"><span class="tip"></span></div>
+                                    <span class="fill" data-percentage="95"></span>
+                                </div>
+                            </div>
+                            <div class="about__bar__item">
+                                <p>Cake Class</p>
+                                <div id="bar5" class="barfiller">
+                                    <div class="tipWrap"><span class="tip"></span></div>
+                                    <span class="fill" data-percentage="80"></span>
+                                </div>
+                            </div>
+                            <div class="about__bar__item">
+                                <p>Cake Recipes</p>
+                                <div id="bar6" class="barfiller">
+                                    <div class="tipWrap"><span class="tip"></span></div>
+                                    <span class="fill" data-percentage="90"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+
+        <!-- Testimonial Section Begin -->
+        <section class="testimonial spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <span>Testimonial</span>
+                            <h2>Our client say</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="testimonial__slider owl-carousel">
+                        <div class="col-lg-6">
+                            <div class="testimonial__item">
+                                <div class="testimonial__author">
+                                    <div class="testimonial__author__pic">
+                                        <img src="img/testimonial/ta-1.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial__author__text">
+                                        <h5>Kerry D.Silva</h5>
+                                        <span>New york</span>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star-half_alt"></span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="testimonial__item">
+                                <div class="testimonial__author">
+                                    <div class="testimonial__author__pic">
+                                        <img src="img/testimonial/ta-2.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial__author__text">
+                                        <h5>Kerry D.Silva</h5>
+                                        <span>New york</span>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star-half_alt"></span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="testimonial__item">
+                                <div class="testimonial__author">
+                                    <div class="testimonial__author__pic">
+                                        <img src="img/testimonial/ta-1.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial__author__text">
+                                        <h5>Ophelia Nunez</h5>
+                                        <span>London</span>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star-half_alt"></span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="testimonial__item">
+                                <div class="testimonial__author">
+                                    <div class="testimonial__author__pic">
+                                        <img src="img/testimonial/ta-2.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial__author__text">
+                                        <h5>Kerry D.Silva</h5>
+                                        <span>New york</span>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star-half_alt"></span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="testimonial__item">
+                                <div class="testimonial__author">
+                                    <div class="testimonial__author__pic">
+                                        <img src="img/testimonial/ta-1.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial__author__text">
+                                        <h5>Ophelia Nunez</h5>
+                                        <span>London</span>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star-half_alt"></span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="testimonial__item">
+                                <div class="testimonial__author">
+                                    <div class="testimonial__author__pic">
+                                        <img src="img/testimonial/ta-2.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial__author__text">
+                                        <h5>Kerry D.Silva</h5>
+                                        <span>New york</span>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star-half_alt"></span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial Section End -->
+
+        <!-- Team Section Begin -->
+        <section class="team spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="section-title">
+                            <span>Our team</span>
+                            <h2>Sweet Baker </h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="team__btn">
+                            <a href="#" class="primary-btn">Join Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="team__item set-bg" data-setbg="img/team/team-1.jpg">
+                            <div class="team__item__text">
+                                <h6>Randy Butler</h6>
+                                <span>Decorater</span>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="team__item set-bg" data-setbg="img/team/team-2.jpg">
+                            <div class="team__item__text">
+                                <h6>Randy Butler</h6>
+                                <span>Decorater</span>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="team__item set-bg" data-setbg="img/team/team-3.jpg">
+                            <div class="team__item__text">
+                                <h6>Randy Butler</h6>
+                                <span>Decorater</span>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="team__item set-bg" data-setbg="img/team/team-4.jpg">
+                            <div class="team__item__text">
+                                <h6>Randy Butler</h6>
+                                <span>Decorater</span>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section End -->
+    </div>
+    <div id="product" class="content-section">
+
+        <!-- Breadcrumb Begin -->
+        <div class="breadcrumb-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__text">
+                            <h2>Sản phẩm</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Shop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+        <!-- Shop Section Begin -->
+        <section class="shop spad">
+            <div class="container">
+                <div class="shop__option">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-7">
+                            <div class="shop__option__search">
+                                <form action="#">
+                                    <select>
+                                        <option value="">Categories</option>
+                                        <option value="">Red Velvet</option>
+                                        <option value="">Cup Cake</option>
+                                        <option value="">Biscuit</option>
+                                    </select>
+                                    <input type="text" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5">
+                            <div class="shop__option__right">
+                                <select>
+                                    <option value="">Default sorting</option>
+                                    <option value="">A to Z</option>
+                                    <option value="">1 - 8</option>
+                                    <option value="">Name</option>
+                                </select>
+                                <a href="#"><i class="fa fa-list"></i></a>
+                                <a href="#"><i class="fa fa-reorder"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">Dozen Cupcakes</a></h6>
+                                <div class="product__item__price">$32.00</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-2.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">Cookies and Cream</a></h6>
+                                <div class="product__item__price">$30.00</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-3.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">Gluten Free Mini Dozen</a></h6>
+                                <div class="product__item__price">$31.00</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-4.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">Cookie Dough</a></h6>
+                                <div class="product__item__price">$25.00</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-5.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">Vanilla Salted Caramel</a></h6>
+                                <div class="product__item__price">$05.00</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-6.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">German Chocolate</a></h6>
+                                <div class="product__item__price">$14.00</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-7.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">Dulce De Leche</a></h6>
+                                <div class="product__item__price">$32.00</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-8.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">Mississippi Mud</a></h6>
+                                <div class="product__item__price">$08.00</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-9.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">VEGAN/GLUTEN FREE</a></h6>
+                                <div class="product__item__price">$98.85</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-10.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">SWEET CELTICS</a></h6>
+                                <div class="product__item__price">$5.77</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-11.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">SWEET AUTUMN LEAVES</a></h6>
+                                <div class="product__item__price">$26.41</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="product__item">
+                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-12.jpg">
+                                <div class="product__label">
+                                    <span>Cupcake</span>
+                                </div>
+                            </div>
+                            <div class="product__item__text">
+                                <h6><a href="#">PALE YELLOW SWEET</a></h6>
+                                <div class="product__item__price">$22.47</div>
+                                <div class="cart_add">
+                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop__last__option">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="shop__pagination">
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#"><span class="arrow_carrot-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="shop__last__text">
+                                <p>Showing 1-9 of 10 results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Shop Section End -->
+
+    </div>
+    <div id="thongtin" class="content-section">
+
+        <!-- Breadcrumb Begin -->
+        <div class="breadcrumb-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__text">
+                            <h2>Thông tin sản phẩm</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Trang chủ</a>
+                            <a href="#">Sản phẩm</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+        <!-- Shop Details Section Begin -->
+        <section class="product-details spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="product__details__img">
+                            <div class="product__details__big__img">
+                                <img class="big_img" src="img/shop/details/product-big-1.jpg" alt="">
+                            </div>
+                            <div class="product__details__thumb">
+                                <div class="pt__item">
+                                    <img data-imgbigurl="img/shop/details/product-big-1.jpg"
+                                         src="img/shop/details/product-big-1.jpg" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="product__details__text">
+                            <div class="product__label">Cupcake</div>
+                            <h4>SWEET AUTUMN LEAVES</h4>
+                            <h5>$26.41</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
+                            <ul>
+                                <li>SKU: <span>17</span></li>
+                                <li>Category: <span>Biscuit cake</span></li>
+                                <li>Tags: <span>Gadgets, minimalisstic</span></li>
+                            </ul>
+                            <div class="product__details__option">
+                                <div class="quantity">
+                                    <div class="pro-qty">
+                                        <input type="text" value="2">
+                                    </div>
+                                </div>
+                                <a href="#" class="primary-btn">Mua ngay</a>
+                                <a href="#" class="heart__btn"><span class="icon_heart_alt"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__details__tab">
+                    <div class="col-lg-12">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Additional information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Previews(1)</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-8">
+                                        <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
+                                            tasty chunks of delicious strawberries. Made with the freshest ingredients, one
+                                            bite will send you to summertime. Each gift arrives in an elegant gift box and
+                                            arrives with a greeting card of your choice that you can personalize online!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-8">
+                                        <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
+                                            tasty chunks of delicious strawberries. Made with the freshest ingredients, one
+                                            bite will send you to summertime. Each gift arrives in an elegant gift box and
+                                            arrives with a greeting card of your choice that you can personalize online!2
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-8">
+                                        <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
+                                            tasty chunks of delicious strawberries. Made with the freshest ingredients, one
+                                            bite will send you to summertime. Each gift arrives in an elegant gift box and
+                                            arrives with a greeting card of your choice that you can personalize online!3
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Shop Details Section End -->
+
+        <!-- Related Products Section Begin -->
+        <section class="related-products spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <h2>Related Products</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="related__products__slider owl-carousel">
+                        <div class="col-lg-3">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
+                                    <div class="product__label">
+                                        <span>Cupcake</span>
+                                    </div>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Dozen Cupcakes</a></h6>
+                                    <div class="product__item__price">$32.00</div>
+                                    <div class="cart_add">
+                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-2.jpg">
+                                    <div class="product__label">
+                                        <span>Cupcake</span>
+                                    </div>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Cookies and Cream</a></h6>
+                                    <div class="product__item__price">$30.00</div>
+                                    <div class="cart_add">
+                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-3.jpg">
+                                    <div class="product__label">
+                                        <span>Cupcake</span>
+                                    </div>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Gluten Free Mini Dozen</a></h6>
+                                    <div class="product__item__price">$31.00</div>
+                                    <div class="cart_add">
+                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-4.jpg">
+                                    <div class="product__label">
+                                        <span>Cupcake</span>
+                                    </div>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Cookie Dough</a></h6>
+                                    <div class="product__item__price">$25.00</div>
+                                    <div class="cart_add">
+                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-5.jpg">
+                                    <div class="product__label">
+                                        <span>Cupcake</span>
+                                    </div>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Vanilla Salted Caramel</a></h6>
+                                    <div class="product__item__price">$05.00</div>
+                                    <div class="cart_add">
+                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-6.jpg">
+                                    <div class="product__label">
+                                        <span>Cupcake</span>
+                                    </div>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">German Chocolate</a></h6>
+                                    <div class="product__item__price">$14.00</div>
+                                    <div class="cart_add">
+                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Related Products Section End -->
+    </div>
+    <div id="pay" class="content-section">
+
+        <!-- Breadcrumb Begin -->
+        <div class="breadcrumb-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__text">
+                            <h2>Shopping cart</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Shopping cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+        <!-- Shopping Cart Section Begin -->
+        <section class="shopping-cart spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="shopping__cart__table">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="product__cart__item">
+                                        <div class="product__cart__item__pic">
+                                            <img src="img/shop/cart/cart-1.jpg" alt="">
+                                        </div>
+                                        <div class="product__cart__item__text">
+                                            <h6>T-shirt Contrast Pocket</h6>
+                                            <h5>$98.49</h5>
+                                        </div>
+                                    </td>
+                                    <td class="quantity__item">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" value="1">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price">$ 30.00</td>
+                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="product__cart__item">
+                                        <div class="product__cart__item__pic">
+                                            <img src="img/shop/cart/cart-2.jpg" alt="">
+                                        </div>
+                                        <div class="product__cart__item__text">
+                                            <h6>Diagonal Textured Cap</h6>
+                                            <h5>$98.49</h5>
+                                        </div>
+                                    </td>
+                                    <td class="quantity__item">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" value="1">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price">$ 32.50</td>
+                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="product__cart__item">
+                                        <div class="product__cart__item__pic">
+                                            <img src="img/shop/cart/cart-3.jpg" alt="">
+                                        </div>
+                                        <div class="product__cart__item__text">
+                                            <h6>Basic Flowing Scarf</h6>
+                                            <h5>$98.49</h5>
+                                        </div>
+                                    </td>
+                                    <td class="quantity__item">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" value="1">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price">$ 47.00</td>
+                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="product__cart__item">
+                                        <div class="product__cart__item__pic">
+                                            <img src="img/shop/cart/cart-4.jpg" alt="">
+                                        </div>
+                                        <div class="product__cart__item__text">
+                                            <h6>Basic Flowing Scarf</h6>
+                                            <h5>$98.49</h5>
+                                        </div>
+                                    </td>
+                                    <td class="quantity__item">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" value="1">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price">$ 30.00</td>
+                                    <td class="cart__close"><span class="icon_close"></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="continue__btn">
+                                    <a href="#">Continue Shopping</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="continue__btn update__btn">
+                                    <a href="#"><i class="fa fa-spinner"></i> Update cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cart__discount">
+                            <h6>Discount codes</h6>
+                            <form action="#">
+                                <input type="text" placeholder="Coupon code">
+                                <button type="submit">Apply</button>
+                            </form>
+                        </div>
+                        <div class="cart__total">
+                            <h6>Cart total</h6>
+                            <ul>
+                                <li>Subtotal <span>$ 169.50</span></li>
+                                <li>Total <span>$ 169.50</span></li>
+                            </ul>
+                            <a href="#" class="primary-btn">Proceed to checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Shopping Cart Section End -->
+    </div>
+    <div id="blog" class="content-section">
+
+        <!-- Breadcrumb Begin -->
+        <div class="breadcrumb-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__text">
+                            <h2>Blog</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+        <!-- Blog Section Begin -->
+        <section class="blog spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="blog__item">
+                            <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-1.jpg">
+                                <div class="blog__pic__inner">
+                                    <div class="label">Recipes</div>
+                                    <ul>
+                                        <li>By <span>James Myers</span></li>
+                                        <li>13 Nov 2020</li>
+                                        <li>112 Views</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog__item__text">
+                                <h2>Delivering Kisses And Miracles</h2>
+                                <p>Herbs are fun and easy to grow. When harvested they make even the simplest meal seem like
+                                    a gourmet delight. By using herbs in your cooking you can easily change the flavors of
+                                    your recipes in many different ways, according to which herbs you add...</p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                        <div class="blog__item">
+                            <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpg">
+                                <div class="blog__pic__inner">
+                                    <div class="label">Recipes</div>
+                                    <ul>
+                                        <li>By <span>James Myers</span></li>
+                                        <li>13 Nov 2020</li>
+                                        <li>112 Views</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog__item__text">
+                                <h2>Make Grilling A Healthy Experience</h2>
+                                <p>Herbs are fun and easy to grow. When harvested they make even the simplest meal seem like
+                                    a gourmet delight. By using herbs in your cooking you can easily change the flavors of
+                                    your recipes in many different ways, according to which herbs you add...</p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                        <div class="blog__item">
+                            <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg">
+                                <div class="blog__pic__inner">
+                                    <div class="label">Recipes</div>
+                                    <ul>
+                                        <li>By <span>James Myers</span></li>
+                                        <li>13 Nov 2020</li>
+                                        <li>112 Views</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog__item__text">
+                                <h2>Bbq Myths Getting You Down</h2>
+                                <p>Herbs are fun and easy to grow. When harvested they make even the simplest meal seem like
+                                    a gourmet delight. By using herbs in your cooking you can easily change the flavors of
+                                    your recipes in many different ways, according to which herbs you add...</p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                        <div class="blog__item">
+                            <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-4.jpg">
+                                <div class="blog__pic__inner">
+                                    <div class="label">Recipes</div>
+                                    <ul>
+                                        <li>By <span>James Myers</span></li>
+                                        <li>13 Nov 2020</li>
+                                        <li>112 Views</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog__item__text">
+                                <h2>Keep That Cooking Area Clean</h2>
+                                <p>Herbs are fun and easy to grow. When harvested they make even the simplest meal seem like
+                                    a gourmet delight. By using herbs in your cooking you can easily change the flavors of
+                                    your recipes in many different ways, according to which herbs you add...</p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                        <div class="shop__pagination">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#"><span class="arrow_carrot-right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__sidebar">
+                            <div class="blog__sidebar__search">
+                                <form action="#">
+                                    <input type="text" placeholder="Enter keyword">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                            <div class="blog__sidebar__item">
+                                <h5>Follow me</h5>
+                                <div class="blog__sidebar__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="blog__sidebar__item">
+                                <h5>Popular posts</h5>
+
+                                <div class="blog__sidebar__recent">
+                                    <a href="#" class="blog__sidebar__recent__item">
+                                        <div class="blog__sidebar__recent__item__pic">
+                                            <img src="img/blog/br-1.jpg" alt="">
+                                        </div>
+                                        <div class="blog__sidebar__recent__item__text">
+                                            <h4>Secret To Cooking Vegetables</h4>
+                                            <span>13 Nov 2020</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="blog__sidebar__recent__item">
+                                        <div class="blog__sidebar__recent__item__pic">
+                                            <img src="img/blog/br-2.jpg" alt="">
+                                        </div>
+                                        <div class="blog__sidebar__recent__item__text">
+                                            <h4>Bbq Myths Getting You Down</h4>
+                                            <span>13 Nov 2020</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="blog__sidebar__recent__item">
+                                        <div class="blog__sidebar__recent__item__pic">
+                                            <img src="img/blog/br-3.jpg" alt="">
+                                        </div>
+                                        <div class="blog__sidebar__recent__item__text">
+                                            <h4>Save Money The Crock Pot Way</h4>
+                                            <span>13 Nov 2020</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="blog__sidebar__recent__item">
+                                        <div class="blog__sidebar__recent__item__pic">
+                                            <img src="img/blog/br-4.jpg" alt="">
+                                        </div>
+                                        <div class="blog__sidebar__recent__item__text">
+                                            <h4>Grilling Tips For The Dog Days Of Summer</h4>
+                                            <span>13 Nov 2020</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="blog__sidebar__recent__item">
+                                        <div class="blog__sidebar__recent__item__pic">
+                                            <img src="img/blog/br-5.jpg" alt="">
+                                        </div>
+                                        <div class="blog__sidebar__recent__item__text">
+                                            <h4>Barbeque Techniques Two Methods To Consider</h4>
+                                            <span>13 Nov 2020</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="blog__sidebar__item">
+                                <h5>Categories</h5>
+                                <div class="blog__sidebar__item__categories">
+                                    <ul>
+                                        <li><a href="#">Repice <span>36</span></a></li>
+                                        <li><a href="#">Guides <span>18</span></a></li>
+                                        <li><a href="#">News <span>09</span></a></li>
+                                        <li><a href="#">Videos <span>12</span></a></li>
+                                        <li><a href="#">Trending <span>27</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog__sidebar__item">
+                                <h5>NEWsLETTeR</h5>
+                                <p>Subscribe to our newsletter and get our newest updates right on your inbox.</p>
+                                <form action="#">
+                                    <input type="text" placeholder="Your email">
+                                    <label for="agg">
+                                        I agree to the terms & conditions
+                                        <input type="checkbox" id="agg">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <button type="submit" class="site-btn">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section End -->
+    </div>
+    <div id="contac" class="content-section">
+
+        <!-- Contact Section Begin -->
+        <section class="contact spad">
+            <div class="container">
+                <div class="map">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-4 col-md-7">
+                                <div class="map__inner">
+                                    <h6>COlorado</h6>
+                                    <ul>
+                                        <li>1000 Lakepoint Dr, Frisco, CO 80443, USA</li>
+                                        <li>Sweetcake@support.com</li>
+                                        <li>+1 800-786-1000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map__iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+                <div class="contact__address">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="contact__address__item">
+                                <h6>san bernardino</h6>
+                                <ul>
+                                    <li>
+                                        <span class="icon_pin_alt"></span>
+                                        <p>795 W 5th St, San Bernardino, CA 92410, USA</p>
+                                    </li>
+                                    <li><span class="icon_headphones"></span>
+                                        <p>+1 800-786-1000</p>
+                                    </li>
+                                    <li><span class="icon_mail_alt"></span>
+                                        <p>Sweetcake@support.com</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="contact__address__item">
+                                <h6>Los angeles</h6>
+                                <ul>
+                                    <li>
+                                        <span class="icon_pin_alt"></span>
+                                        <p>639 S Spring St, Los Angeles, CA 90014, USA</p>
+                                    </li>
+                                    <li><span class="icon_headphones"></span>
+                                        <p>+1 213-612-3000</p>
+                                    </li>
+                                    <li><span class="icon_mail_alt"></span>
+                                        <p>Sweetcake@support.com</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="contact__address__item">
+                                <h6>san bernardino</h6>
+                                <ul>
+                                    <li>
+                                        <span class="icon_pin_alt"></span>
+                                        <p>1000 Lakepoint Dr, Frisco, CO 80443, USA</p>
+                                    </li>
+                                    <li><span class="icon_headphones"></span>
+                                        <p>+1 800-786-1000</p>
+                                    </li>
+                                    <li><span class="icon_mail_alt"></span>
+                                        <p>Sweetcake@support.com</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="contact__text">
+                            <h3>Contact With us</h3>
+                            <ul>
+                                <li>Representatives or Advisors are available:</li>
+                                <li>Mon-Fri: 5:00am to 9:00pm</li>
+                                <li>Sat-Sun: 6:00am to 9:00pm</li>
+                            </ul>
+                            <img src="img/cake-piece.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="contact__form">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Email">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <textarea placeholder="Message"></textarea>
+                                        <button type="submit" class="site-btn">Send Us</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+
+    </div>
+    <!-- Map Begin -->
+    <div class="map">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-7">
+                    <div class="map__inner">
+                        <h6>COlorado</h6>
+                        <ul>
+                            <li>1000 Lakepoint Dr, Frisco, CO 80443, USA</li>
+                            <li>Sweetcake@support.com</li>
+                            <li>+1 800-786-1000</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map__iframe">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+    <!-- Map End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>WORKING HOURS</h6>
+                        <ul>
+                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>
+                            <li>Saturday: 10:00 am – 16:30 pm</li>
+                            <li>Sunday: 10:00 am – 16:30 pm</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore dolore magna aliqua.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__newslatter">
+                        <h6>Subscribe</h6>
+                        <p>Get latest updates and offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit"><i class="fa fa-send-o"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      </p>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="copyright__widget">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Search Begin -->
+<div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch">+</div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Search here.....">
+        </form>
+    </div>
+</div>
+<!-- Search End -->
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.barfiller.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function switchTab(tabId) {
+        // 1. Ẩn tất cả tab
+        const tabs = document.querySelectorAll('.content-section');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        console.log(tabId);
+        // 2. Hiện tab đang chọn
+        const activeTab = document.getElementById(tabId);
+        if (activeTab) {
+            activeTab.classList.add('active');
+        }
+        // 3. Xóa class active khỏi tất cả menu li
+        document.querySelectorAll('.header__menu ul li').forEach(li => {
+            li.classList.remove('active');
+        });
+
+        // 4. Tìm đúng <a> theo tabId
+        document.querySelectorAll('.header__menu a').forEach(a => {
+            const onclick = a.getAttribute('onclick');
+            if (onclick && onclick.includes(tabId)) {
+                const currentLi = a.closest('li');
+                if (currentLi) {
+                    currentLi.classList.add('active');
+
+                    // Nếu đây là mục con trong dropdown, thêm active cho menu cha
+                    const parentLi = currentLi.closest('ul.dropdown')?.closest('li');
+                    if (parentLi) {
+                        parentLi.classList.add('active');
+                    }
+                }
+            }
+        });
+    }
+</script>
+</html>
