@@ -51,6 +51,79 @@
         display: block;
     }
 </style>
+<script>
+    let dem  = 0;
+</script>
+<script id="product-data" type="application/json">
+    [
+        {
+            "id": 1,
+            "name": "Một tá cupcake",
+            "price": "3200",
+            "img": "img/shop/product-1.jpg",
+            "card": "img/shop/cart/cart-1.jpg",
+            "category": "Bánh cupcake",
+            "sku": "P001",
+            "tags": "ngọt, truyền thống",
+            "description": "Một tá bánh cupcake hương vani, mềm mịn, phủ kem ngọt ngào. Phù hợp cho sinh nhật hoặc tiệc trà."
+        },
+        {
+            "id": 2,
+            "name": "Cookies và Kem",
+            "price": "3000",
+            "img": "img/shop/product-2.jpg",
+            "card": "img/shop/cart/cart-2.jpg",
+            "category": "Bánh cupcake",
+            "sku": "P002",
+            "tags": "kem lạnh, sô-cô-la",
+            "description": "Bánh cupcake kết hợp cookies giòn và kem mịn. Hương vị độc đáo khó quên."
+        },
+        {
+            "id": 3,
+            "name": "Mini không gluten",
+            "price": "3100",
+            "img": "img/shop/product-3.jpg",
+            "card": "img/shop/cart/cart-3.jpg",
+            "category": "Bánh cupcake",
+            "sku": "P003",
+            "tags": "không gluten, mini",
+            "description": "Dành cho người ăn kiêng gluten. Bánh nhỏ xinh, vị nhẹ nhàng, dễ ăn."
+        },
+        {
+            "id": 4,
+            "name": "Bánh quy socola",
+            "price": "2500",
+            "img": "img/shop/product-4.jpg",
+            "card": "img/shop/cart/cart-4.jpg",
+            "category": "Bánh cupcake",
+            "sku": "P004",
+            "tags": "socola, cookie",
+            "description": "Cupcake mềm, phủ bánh quy socola thơm béo. Phù hợp mọi lứa tuổi."
+        },
+        {
+            "id": 5,
+            "name": "Caramel muối vị vanilla",
+            "price": "5500",
+            "img": "img/shop/product-5.jpg",
+            "card": "img/shop/cart/cart-1.jpg",
+            "category": "Bánh cupcake",
+            "sku": "P005",
+            "tags": "caramel, vanilla, muối biển",
+            "description": "Bánh vani thơm, phủ caramel muối cân bằng vị ngọt và mặn."
+        },
+        {
+            "id": 6,
+            "name": "Socola Đức",
+            "price": "1400",
+            "img": "img/shop/product-6.jpg",
+            "card": "img/shop/cart/cart-1.jpg",
+            "category": "Bánh cupcake",
+            "sku": "P006",
+            "tags": "đậm đà, socola đen",
+            "description": "Cupcake socola phong cách Đức, lớp phủ socola đen thơm ngào ngạt."
+        }
+    ]
+</script>
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -66,8 +139,8 @@
                 <a href="#"><img src="img/icon/heart.png" alt=""></a>
             </div>
             <div class="offcanvas__cart__item">
-                <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                <div class="cart__price">Cart: <span>$0.00</span></div>
+                <a href="#"><img src="img/icon/cart.png" alt=""> <span></span></a>
+                <div class="cart__price">Cart: <span></span>đ</div>
             </div>
         </div>
         <div class="offcanvas__logo">
@@ -92,12 +165,15 @@
                             </div>
                             <div class="header__top__right">
                                 <div class="header__top__right__links">
+                                    <b>Little Bread House</b>
+                                </div>
+                                <div class="header__top__right__links">
                                     <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
                                     <a href="#"><img src="img/icon/heart.png" alt=""></a>
                                 </div>
                                 <div class="header__top__right__cart">
-                                    <a href="#"><img src="img/icon/cart.png" alt=""> <span>3</span></a>
-
+                                    <a href="#"><img src="img/icon/cart.png" alt=""> <span><output id="gio">0</output></span></a>
+                                    <div class="cart__price">Cart: <span><output id="tien">0</output></span>đ</div>
                                 </div>
                             </div>
                         </div>
@@ -131,577 +207,308 @@
     <div id="home" class="content-section active">
     <!-- Hero Section Begin -->
     <section class="hero">
-        <div class="hero__slider owl-carousel">
-            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
-                <div class="container">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="hero__text">
-                                <h2>Making your life sweeter one bite at a time!</h2>
-                                <a href="#" class="primary-btn">Our cakes</a>
+            <div class="hero__slider owl-carousel">
+                <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="hero__text">
+                                    <h2>Biến cuộc sống của bạn ngọt ngào hơn từng miếng bánh!</h2>
+                                    <a href="#" class="primary-btn">Bánh của chúng tôi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="hero__text">
+                                    <h2>Biến cuộc sống của bạn ngọt ngào hơn từng miếng bánh!</h2>
+                                    <a href="#" class="primary-btn">Bánh của chúng tôi</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
-                <div class="container">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="hero__text">
-                                <h2>Making your life sweeter one bite at a time!</h2>
-                                <a href="#" class="primary-btn">Our cakes</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     <!-- Hero Section End -->
 
     <!-- About Section Begin -->
-    <section class="about spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="about__text">
-                        <div class="section-title">
-                            <span>About Cake shop</span>
-                            <h2>Cakes and bakes from the house of Queens!</h2>
+        <!-- Giới thiệu Bắt đầu -->
+        <section class="about spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="about__text">
+                            <div class="section-title">
+                                <span>Về tiệm bánh</span>
+                                <h2>Bánh ngọt và món nướng từ ngôi nhà của Nữ hoàng!</h2>
+                            </div>
+                            <p>"Tiệm Bánh" là một thương hiệu của Jordan bắt đầu từ một doanh nghiệp gia đình nhỏ. Chủ sở hữu là
+                                Tiến sĩ Iyad Sultan và Tiến sĩ Sereen Sharabati, với sự hỗ trợ của 80 nhân viên.</p>
                         </div>
-                        <p>The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are
-                        Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="about__bar">
-                        <div class="about__bar__item">
-                            <p>Cake design</p>
-                            <div id="bar1" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="95"></span>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="about__bar">
+                            <div class="about__bar__item">
+                                <p>Thiết kế bánh</p>
+                                <div id="bar1" class="barfiller">
+                                    <div class="tipWrap"><span class="tip"></span></div>
+                                    <span class="fill" data-percentage="95"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="about__bar__item">
-                            <p>Cake Class</p>
-                            <div id="bar2" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="80"></span>
+                            <div class="about__bar__item">
+                                <p>Lớp học làm bánh</p>
+                                <div id="bar2" class="barfiller">
+                                    <div class="tipWrap"><span class="tip"></span></div>
+                                    <span class="fill" data-percentage="80"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="about__bar__item">
-                            <p>Cake Recipes</p>
-                            <div id="bar3" class="barfiller">
-                                <div class="tipWrap"><span class="tip"></span></div>
-                                <span class="fill" data-percentage="90"></span>
+                            <div class="about__bar__item">
+                                <p>Công thức bánh</p>
+                                <div id="bar3" class="barfiller">
+                                    <div class="tipWrap"><span class="tip"></span></div>
+                                    <span class="fill" data-percentage="90"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- Giới thiệu Kết thúc -->
     <!-- About Section End -->
 
     <!-- Categories Section Begin -->
-    <div class="categories">
-        <div class="container">
-            <div class="row">
-                <div class="categories__slider owl-carousel">
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-029-cupcake-3"></span>
-                            <h5>Cupcake</h5>
+        <div class="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="categories__slider owl-carousel">
+                        <div class="categories__item">
+                            <div class="categories__item__icon">
+                                <span class="flaticon-029-cupcake-3"></span>
+                                <h5>Bánh cupcake</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-034-chocolate-roll"></span>
-                            <h5>Butter</h5>
+                        <div class="categories__item">
+                            <div class="categories__item__icon">
+                                <span class="flaticon-034-chocolate-roll"></span>
+                                <h5>Bơ</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-005-pancake"></span>
-                            <h5>Red Velvet</h5>
+                        <div class="categories__item">
+                            <div class="categories__item__icon">
+                                <span class="flaticon-005-pancake"></span>
+                                <h5>Red Velvet</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-030-cupcake-2"></span>
-                            <h5>Biscuit</h5>
+                        <div class="categories__item">
+                            <div class="categories__item__icon">
+                                <span class="flaticon-030-cupcake-2"></span>
+                                <h5>Bánh quy</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-006-macarons"></span>
-                            <h5>Donut</h5>
+                        <div class="categories__item">
+                            <div class="categories__item__icon">
+                                <span class="flaticon-006-macarons"></span>
+                                <h5>Bánh donut</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="categories__item">
-                        <div class="categories__item__icon">
-                            <span class="flaticon-006-macarons"></span>
-                            <h5>Cupcake</h5>
+                        <div class="categories__item">
+                            <div class="categories__item__icon">
+                                <span class="flaticon-006-macarons"></span>
+                                <h5>Bánh cupcake</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <!-- Categories Section End -->
 
     <!-- Product Section Begin -->
-    <section class="product spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Dozen Cupcakes</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-2.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cookies and Cream</a></h6>
-                            <div class="product__item__price">$30.00</div>
-                            <div class="cart_add">
-                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-3.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Gluten Free Mini Dozen</a></h6>
-                            <div class="product__item__price">$31.00</div>
-                            <div class="cart_add">
-                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-4.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cookie Dough</a></h6>
-                            <div class="product__item__price">$25.00</div>
-                            <div class="cart_add">
-                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-5.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Vanilla Salted Caramel</a></h6>
-                            <div class="product__item__price">$05.00</div>
-                            <div class="cart_add">
-                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-6.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">German Chocolate</a></h6>
-                            <div class="product__item__price">$14.00</div>
-                            <div class="cart_add">
-                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-7.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Dulce De Leche</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-8.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Mississippi Mud</a></h6>
-                            <div class="product__item__price">$08.00</div>
-                            <div class="cart_add">
-                                <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
+        <section class="product spad">
+            <div class="container">
+                <div class="row" id="product-home">
+                    <!-- Một sản phẩm -->
+
+                    <!-- Lặp lại các sản phẩm tương tự, giữ nguyên cấu trúc và thay đổi tên/sp nếu muốn -->
+                    ...
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     <!-- Product Section End -->
 
     <!-- Class Section Begin -->
-    <section class="class spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="class__form">
-                        <div class="section-title">
-                            <span>Class cakes</span>
-                            <h2>Made from your <br />own hands</h2>
+        <section class="class spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="class__form">
+                            <div class="section-title">
+                                <span>Lớp học làm bánh</span>
+                                <h2>Làm bánh bằng chính <br />đôi tay của bạn</h2>
+                            </div>
+                            <form action="#">
+                                <input type="text" placeholder="Họ tên">
+                                <input type="text" placeholder="Số điện thoại">
+                                <select>
+                                    <option value="">Chọn lớp học</option>
+                                    <option value="">Lớp viết</option>
+                                    <option value="">Lớp đọc</option>
+                                </select>
+                                <input type="text" placeholder="Ghi yêu cầu của bạn">
+                                <button type="submit" class="site-btn">Đăng ký</button>
+                            </form>
                         </div>
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Phone">
-                            <select>
-                                <option value="">Studying Class</option>
-                                <option value="">Writting Class</option>
-                                <option value="">Reading Class</option>
-                            </select>
-                            <input type="text" placeholder="Type your requirements">
-                            <button type="submit" class="site-btn">registration</button>
-                        </form>
                     </div>
                 </div>
+                <div class="class__video set-bg" data-setbg="img/class-video.jpg">
+                    <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
+                       class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                </div>
             </div>
-            <div class="class__video set-bg" data-setbg="img/class-video.jpg">
-                <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
-                class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            </div>
-        </div>
-    </section>
+        </section>
     <!-- Class Section End -->
 
     <!-- Team Section Begin -->
-    <section class="team spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-7 col-sm-7">
-                    <div class="section-title">
-                        <span>Our team</span>
-                        <h2>Sweet Baker </h2>
+        <section class="team spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="section-title">
+                            <span>Đội ngũ của chúng tôi</span>
+                            <h2>Những người thợ làm bánh ngọt</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="team__btn">
+                            <a href="#" class="primary-btn">Tham gia với chúng tôi</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-5 col-sm-5">
-                    <div class="team__btn">
-                        <a href="#" class="primary-btn">Join Us</a>
+                <div class="row">
+                    <!-- Một thành viên -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item set-bg" data-setbg="img/team/team-1.jpg">
+                            <div class="team__item__text">
+                                <h6>Randy Butler</h6>
+                                <span>Người trang trí bánh</span>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Lặp lại các thành viên tương tự -->
+                    ...
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item set-bg" data-setbg="img/team/team-1.jpg">
-                        <div class="team__item__text">
-                            <h6>Randy Butler</h6>
-                            <span>Decorater</span>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item set-bg" data-setbg="img/team/team-2.jpg">
-                        <div class="team__item__text">
-                            <h6>Randy Butler</h6>
-                            <span>Decorater</span>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item set-bg" data-setbg="img/team/team-3.jpg">
-                        <div class="team__item__text">
-                            <h6>Randy Butler</h6>
-                            <span>Decorater</span>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item set-bg" data-setbg="img/team/team-4.jpg">
-                        <div class="team__item__text">
-                            <h6>Randy Butler</h6>
-                            <span>Decorater</span>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     <!-- Team Section End -->
 
     <!-- Testimonial Section Begin -->
-    <section class="testimonial spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-title">
-                        <span>Testimonial</span>
-                        <h2>Our client say</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="testimonial__slider owl-carousel">
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-1.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Kerry D.Silva</h5>
-                                    <span>New york</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-2.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Kerry D.Silva</h5>
-                                    <span>New york</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-1.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Ophelia Nunez</h5>
-                                    <span>London</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-2.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Kerry D.Silva</h5>
-                                    <span>New york</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-1.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Ophelia Nunez</h5>
-                                    <span>London</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testimonial__item">
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="img/testimonial/ta-2.jpg" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Kerry D.Silva</h5>
-                                    <span>New york</span>
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star"></span>
-                                <span class="icon_star-half_alt"></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+        <section class="testimonial spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <span>Khách hàng nói gì</span>
+                            <h2>Đánh giá từ khách hàng</h2>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="testimonial__slider owl-carousel">
+                        <!-- Một phản hồi -->
+                        <div class="col-lg-6">
+                            <div class="testimonial__item">
+                                <div class="testimonial__author">
+                                    <div class="testimonial__author__pic">
+                                        <img src="img/testimonial/ta-1.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial__author__text">
+                                        <h5>Kerry D.Silva</h5>
+                                        <span>New York</span>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star"></span>
+                                    <span class="icon_star-half_alt"></span>
+                                </div>
+                                <p>Rất ngon! Dịch vụ tuyệt vời và sản phẩm chất lượng. Tôi sẽ quay lại lần nữa.</p>
+                            </div>
+                        </div>
+                        <!-- Các phản hồi khác, bạn giữ nguyên cấu trúc và thay ảnh/tên/nội dung nếu muốn -->
+                        ...
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     <!-- Testimonial Section End -->
 
     <!-- Instagram Section Begin -->
-    <section class="instagram spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 p-0">
-                    <div class="instagram__text">
-                        <div class="section-title">
-                            <span>Follow us on instagram</span>
-                            <h2>Sweet moments are saved as memories.</h2>
+        <section class="instagram spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 p-0">
+                        <div class="instagram__text">
+                            <div class="section-title">
+                                <span>Theo dõi chúng tôi trên Instagram</span>
+                                <h2>Những khoảnh khắc ngọt ngào lưu giữ thành kỷ niệm.</h2>
+                            </div>
+                            <h5><i class="fa fa-instagram"></i> @sweetcake</h5>
                         </div>
-                        <h5><i class="fa fa-instagram"></i> @sweetcake</h5>
                     </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                            <div class="instagram__pic">
-                                <img src="img/instagram/instagram-1.jpg" alt="">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="instagram__pic">
+                                    <img src="img/instagram/instagram-1.jpg" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                            <div class="instagram__pic middle__pic">
-                                <img src="img/instagram/instagram-2.jpg" alt="">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="instagram__pic middle__pic">
+                                    <img src="img/instagram/instagram-2.jpg" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                            <div class="instagram__pic">
-                                <img src="img/instagram/instagram-3.jpg" alt="">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="instagram__pic">
+                                    <img src="img/instagram/instagram-3.jpg" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                            <div class="instagram__pic">
-                                <img src="img/instagram/instagram-4.jpg" alt="">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="instagram__pic">
+                                    <img src="img/instagram/instagram-4.jpg" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                            <div class="instagram__pic middle__pic">
-                                <img src="img/instagram/instagram-5.jpg" alt="">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="instagram__pic middle__pic">
+                                    <img src="img/instagram/instagram-5.jpg" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                            <div class="instagram__pic">
-                                <img src="img/instagram/instagram-3.jpg" alt="">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="instagram__pic">
+                                    <img src="img/instagram/instagram-3.jpg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     <!-- Instagram Section End -->
 </div>
-    <div id="about" class="content-section" >
+    <div id="about" class="content-section">
 
         <!-- Breadcrumb Begin -->
         <div class="breadcrumb-option">
@@ -738,31 +545,30 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="about__text">
                             <div class="section-title">
-                                <span>About Cake shop</span>
-                                <h2>Cakes and bakes from the house of Queens!</h2>
+                                <span>Giới thiệu Cake Shop</span>
+                                <h2>Bánh ngọt và bánh nướng từ ngôi nhà của các nữ hoàng!</h2>
                             </div>
-                            <p>The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are
-                                Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
+                            <p>"Cake Shop" là một thương hiệu đến từ Jordan, bắt đầu như một doanh nghiệp gia đình nhỏ. Chủ sở hữu là bác sĩ Iyad Sultan và bác sĩ Sereen Sharabati, với đội ngũ nhân viên gồm 80 người.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="about__bar">
                             <div class="about__bar__item">
-                                <p>Cake design</p>
+                                <p>Thiết kế bánh</p>
                                 <div id="bar4" class="barfiller">
                                     <div class="tipWrap"><span class="tip"></span></div>
                                     <span class="fill" data-percentage="95"></span>
                                 </div>
                             </div>
                             <div class="about__bar__item">
-                                <p>Cake Class</p>
+                                <p>Lớp học làm bánh</p>
                                 <div id="bar5" class="barfiller">
                                     <div class="tipWrap"><span class="tip"></span></div>
                                     <span class="fill" data-percentage="80"></span>
                                 </div>
                             </div>
                             <div class="about__bar__item">
-                                <p>Cake Recipes</p>
+                                <p>Công thức làm bánh</p>
                                 <div id="bar6" class="barfiller">
                                     <div class="tipWrap"><span class="tip"></span></div>
                                     <span class="fill" data-percentage="90"></span>
@@ -781,8 +587,8 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="section-title">
-                            <span>Testimonial</span>
-                            <h2>Our client say</h2>
+                            <span>Đánh giá</span>
+                            <h2>Khách hàng của chúng tôi nói gì</h2>
                         </div>
                     </div>
                 </div>
@@ -796,18 +602,13 @@
                                     </div>
                                     <div class="testimonial__author__text">
                                         <h5>Kerry D.Silva</h5>
-                                        <span>New york</span>
+                                        <span>New York</span>
                                     </div>
                                 </div>
                                 <div class="rating">
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star-half_alt"></span>
+                                    <span class="icon_star"></span><span class="icon_star"></span><span class="icon_star"></span><span class="icon_star"></span><span class="icon_star-half_alt"></span>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                                <p>Bánh rất ngon, phục vụ tận tình. Tôi rất hài lòng và chắc chắn sẽ quay lại!</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -815,28 +616,6 @@
                                 <div class="testimonial__author">
                                     <div class="testimonial__author__pic">
                                         <img src="img/testimonial/ta-2.jpg" alt="">
-                                    </div>
-                                    <div class="testimonial__author__text">
-                                        <h5>Kerry D.Silva</h5>
-                                        <span>New york</span>
-                                    </div>
-                                </div>
-                                <div class="rating">
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star-half_alt"></span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="testimonial__item">
-                                <div class="testimonial__author">
-                                    <div class="testimonial__author__pic">
-                                        <img src="img/testimonial/ta-1.jpg" alt="">
                                     </div>
                                     <div class="testimonial__author__text">
                                         <h5>Ophelia Nunez</h5>
@@ -844,82 +623,12 @@
                                     </div>
                                 </div>
                                 <div class="rating">
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star-half_alt"></span>
+                                    <span class="icon_star"></span><span class="icon_star"></span><span class="icon_star"></span><span class="icon_star"></span><span class="icon_star-half_alt"></span>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                                <p>Bánh kem ở đây thật sự đỉnh cao. Trang trí đẹp mắt và hương vị tuyệt vời.</p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="testimonial__item">
-                                <div class="testimonial__author">
-                                    <div class="testimonial__author__pic">
-                                        <img src="img/testimonial/ta-2.jpg" alt="">
-                                    </div>
-                                    <div class="testimonial__author__text">
-                                        <h5>Kerry D.Silva</h5>
-                                        <span>New york</span>
-                                    </div>
-                                </div>
-                                <div class="rating">
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star-half_alt"></span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="testimonial__item">
-                                <div class="testimonial__author">
-                                    <div class="testimonial__author__pic">
-                                        <img src="img/testimonial/ta-1.jpg" alt="">
-                                    </div>
-                                    <div class="testimonial__author__text">
-                                        <h5>Ophelia Nunez</h5>
-                                        <span>London</span>
-                                    </div>
-                                </div>
-                                <div class="rating">
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star-half_alt"></span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="testimonial__item">
-                                <div class="testimonial__author">
-                                    <div class="testimonial__author__pic">
-                                        <img src="img/testimonial/ta-2.jpg" alt="">
-                                    </div>
-                                    <div class="testimonial__author__text">
-                                        <h5>Kerry D.Silva</h5>
-                                        <span>New york</span>
-                                    </div>
-                                </div>
-                                <div class="rating">
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star"></span>
-                                    <span class="icon_star-half_alt"></span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
-                            </div>
-                        </div>
+                        <!-- Thêm các đánh giá khác nếu muốn -->
                     </div>
                 </div>
             </div>
@@ -932,22 +641,23 @@
                 <div class="row">
                     <div class="col-lg-7 col-md-7 col-sm-7">
                         <div class="section-title">
-                            <span>Our team</span>
-                            <h2>Sweet Baker </h2>
+                            <span>Đội ngũ của chúng tôi</span>
+                            <h2>Thợ làm bánh tài năng</h2>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-5">
                         <div class="team__btn">
-                            <a href="#" class="primary-btn">Join Us</a>
+                            <a href="#" class="primary-btn">Tham gia cùng chúng tôi</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3  col-md-6 col-sm-6">
+                    <!-- Thành viên 1 -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="team__item set-bg" data-setbg="img/team/team-1.jpg">
                             <div class="team__item__text">
                                 <h6>Randy Butler</h6>
-                                <span>Decorater</span>
+                                <span>Chuyên gia trang trí bánh</span>
                                 <div class="team__item__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -957,53 +667,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3  col-md-6 col-sm-6">
-                        <div class="team__item set-bg" data-setbg="img/team/team-2.jpg">
-                            <div class="team__item__text">
-                                <h6>Randy Butler</h6>
-                                <span>Decorater</span>
-                                <div class="team__item__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3  col-md-6 col-sm-6">
-                        <div class="team__item set-bg" data-setbg="img/team/team-3.jpg">
-                            <div class="team__item__text">
-                                <h6>Randy Butler</h6>
-                                <span>Decorater</span>
-                                <div class="team__item__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3  col-md-6 col-sm-6">
-                        <div class="team__item set-bg" data-setbg="img/team/team-4.jpg">
-                            <div class="team__item__text">
-                                <h6>Randy Butler</h6>
-                                <span>Decorater</span>
-                                <div class="team__item__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Thành viên khác tương tự -->
+                    <!-- ... -->
                 </div>
             </div>
         </section>
         <!-- Team Section End -->
+
     </div>
+
     <div id="product" class="content-section">
 
         <!-- Breadcrumb Begin -->
@@ -1018,7 +690,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="breadcrumb__links">
                             <a href="./index.html">Trang chủ</a>
-                            <span>Shop</span>
+                            <span>Cửa hàng</span>
                         </div>
                     </div>
                 </div>
@@ -1035,12 +707,12 @@
                             <div class="shop__option__search">
                                 <form action="#">
                                     <select>
-                                        <option value="">Categories</option>
+                                        <option value="">Danh mục</option>
                                         <option value="">Red Velvet</option>
-                                        <option value="">Cup Cake</option>
-                                        <option value="">Biscuit</option>
+                                        <option value="">Bánh Cupcake</option>
+                                        <option value="">Bánh quy</option>
                                     </select>
-                                    <input type="text" placeholder="Search">
+                                    <input type="text" placeholder="Tìm kiếm...">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
@@ -1048,10 +720,10 @@
                         <div class="col-lg-5 col-md-5">
                             <div class="shop__option__right">
                                 <select>
-                                    <option value="">Default sorting</option>
-                                    <option value="">A to Z</option>
+                                    <option value="">Sắp xếp mặc định</option>
+                                    <option value="">Từ A đến Z</option>
                                     <option value="">1 - 8</option>
-                                    <option value="">Name</option>
+                                    <option value="">Tên sản phẩm</option>
                                 </select>
                                 <a href="#"><i class="fa fa-list"></i></a>
                                 <a href="#"><i class="fa fa-reorder"></i></a>
@@ -1059,200 +731,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Dozen Cupcakes</a></h6>
-                                <div class="product__item__price">$32.00</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-2.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Cookies and Cream</a></h6>
-                                <div class="product__item__price">$30.00</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-3.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Gluten Free Mini Dozen</a></h6>
-                                <div class="product__item__price">$31.00</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-4.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Cookie Dough</a></h6>
-                                <div class="product__item__price">$25.00</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-5.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Vanilla Salted Caramel</a></h6>
-                                <div class="product__item__price">$05.00</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-6.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">German Chocolate</a></h6>
-                                <div class="product__item__price">$14.00</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-7.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Dulce De Leche</a></h6>
-                                <div class="product__item__price">$32.00</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-8.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Mississippi Mud</a></h6>
-                                <div class="product__item__price">$08.00</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-9.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">VEGAN/GLUTEN FREE</a></h6>
-                                <div class="product__item__price">$98.85</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-10.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">SWEET CELTICS</a></h6>
-                                <div class="product__item__price">$5.77</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-11.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">SWEET AUTUMN LEAVES</a></h6>
-                                <div class="product__item__price">$26.41</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-12.jpg">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">PALE YELLOW SWEET</a></h6>
-                                <div class="product__item__price">$22.47</div>
-                                <div class="cart_add">
-                                    <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <div class="row" id="product-list"></div>
+
                 <div class="shop__last__option">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -1265,7 +746,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="shop__last__text">
-                                <p>Showing 1-9 of 10 results</p>
+                                <p>Hiển thị 1-9 trên tổng số 10 sản phẩm</p>
                             </div>
                         </div>
                     </div>
@@ -1275,6 +756,7 @@
         <!-- Shop Section End -->
 
     </div>
+
     <div id="thongtin" class="content-section">
 
         <!-- Breadcrumb Begin -->
@@ -1290,7 +772,6 @@
                         <div class="breadcrumb__links">
                             <a href="./index.html">Trang chủ</a>
                             <a href="#">Sản phẩm</a>
-
                         </div>
                     </div>
                 </div>
@@ -1312,29 +793,28 @@
                                     <img data-imgbigurl="img/shop/details/product-big-1.jpg"
                                          src="img/shop/details/product-big-1.jpg" alt="">
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        <input type="hidden" id="idsp">
                         <div class="product__details__text">
-                            <div class="product__label">Cupcake</div>
-                            <h4>SWEET AUTUMN LEAVES</h4>
-                            <h5>$26.41</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
+                            <div class="product__label">Bánh cupcake</div>
+                            <h4>LÁ THU NGỌT NGÀO</h4>
+                            <h5>26,41 đô</h5>
+                            <p>Bánh này có vị dâu tây ngon tuyệt vời, được làm từ nguyên liệu tươi ngon, mang đến cảm giác mùa hè trong từng miếng cắn. Mỗi món quà được gói trong hộp sang trọng và kèm theo thiệp chúc mừng có thể cá nhân hóa.</p>
                             <ul>
-                                <li>SKU: <span>17</span></li>
-                                <li>Category: <span>Biscuit cake</span></li>
-                                <li>Tags: <span>Gadgets, minimalisstic</span></li>
+                                <li>Mã sản phẩm (SKU): <span>17</span></li>
+                                <li>Danh mục: <span>Bánh quy</span></li>
+                                <li>Thẻ: <span>Đồ dùng, tối giản</span></li>
                             </ul>
                             <div class="product__details__option">
                                 <div class="quantity">
                                     <div class="pro-qty">
-                                        <input type="text" value="2">
+                                        <input type="text" id="soluong" value="1">
                                     </div>
                                 </div>
-                                <a href="#" class="primary-btn">Mua ngay</a>
+                                <a href="#" class="primary-btn" onclick="themgiohang();">Thêm vào giỏ hàng</a>
                                 <a href="#" class="heart__btn"><span class="icon_heart_alt"></span></a>
                             </div>
                         </div>
@@ -1344,45 +824,34 @@
                     <div class="col-lg-12">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Description</a>
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Mô tả</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Additional information</a>
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Thông tin bổ sung</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Previews(1)</a>
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Xem trước (1)</a>
                             </li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-lg-8">
-                                        <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                            tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                            bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                            arrives with a greeting card of your choice that you can personalize online!</p>
+                                        <p>Bánh Dâu này là món tráng miệng tuyệt vời với những miếng dâu thơm ngọt. Làm từ nguyên liệu tươi nhất, chỉ một miếng cắn sẽ đưa bạn đến mùa hè. Quà tặng đi kèm hộp sang trọng và thiệp chúc mừng có thể tùy chỉnh.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-lg-8">
-                                        <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                            tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                            bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                            arrives with a greeting card of your choice that you can personalize online!2
-                                        </p>
+                                        <p>Bánh Dâu này là món tráng miệng tuyệt vời với những miếng dâu thơm ngọt. Làm từ nguyên liệu tươi nhất, chỉ một miếng cắn sẽ đưa bạn đến mùa hè. Quà tặng đi kèm hộp sang trọng và thiệp chúc mừng có thể tùy chỉnh.2</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-3" role="tabpanel">
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-lg-8">
-                                        <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                            tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                            bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                            arrives with a greeting card of your choice that you can personalize online!3
-                                        </p>
+                                        <p>Bánh Dâu này là món tráng miệng tuyệt vời với những miếng dâu thơm ngọt. Làm từ nguyên liệu tươi nhất, chỉ một miếng cắn sẽ đưa bạn đến mùa hè. Quà tặng đi kèm hộp sang trọng và thiệp chúc mừng có thể tùy chỉnh.3</p>
                                     </div>
                                 </div>
                             </div>
@@ -1399,114 +868,21 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="section-title">
-                            <h2>Related Products</h2>
+                            <h2>Sản phẩm liên quan</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="related__products__slider owl-carousel">
-                        <div class="col-lg-3">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
-                                    <div class="product__label">
-                                        <span>Cupcake</span>
-                                    </div>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Dozen Cupcakes</a></h6>
-                                    <div class="product__item__price">$32.00</div>
-                                    <div class="cart_add">
-                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-2.jpg">
-                                    <div class="product__label">
-                                        <span>Cupcake</span>
-                                    </div>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Cookies and Cream</a></h6>
-                                    <div class="product__item__price">$30.00</div>
-                                    <div class="cart_add">
-                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-3.jpg">
-                                    <div class="product__label">
-                                        <span>Cupcake</span>
-                                    </div>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Gluten Free Mini Dozen</a></h6>
-                                    <div class="product__item__price">$31.00</div>
-                                    <div class="cart_add">
-                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-4.jpg">
-                                    <div class="product__label">
-                                        <span>Cupcake</span>
-                                    </div>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Cookie Dough</a></h6>
-                                    <div class="product__item__price">$25.00</div>
-                                    <div class="cart_add">
-                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-5.jpg">
-                                    <div class="product__label">
-                                        <span>Cupcake</span>
-                                    </div>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Vanilla Salted Caramel</a></h6>
-                                    <div class="product__item__price">$05.00</div>
-                                    <div class="cart_add">
-                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/shop/product-6.jpg">
-                                    <div class="product__label">
-                                        <span>Cupcake</span>
-                                    </div>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">German Chocolate</a></h6>
-                                    <div class="product__item__price">$14.00</div>
-                                    <div class="cart_add">
-                                        <a href="#" onclick="switchTab('thongtin')" >Mua ngay</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="row" >
+                    <div class="related__products__slider owl-carousel" id="product-product">
+
+
                     </div>
                 </div>
             </div>
         </section>
         <!-- Related Products Section End -->
     </div>
+
     <div id="pay" class="content-section">
 
         <!-- Breadcrumb Begin -->
@@ -1515,13 +891,13 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="breadcrumb__text">
-                            <h2>Shopping cart</h2>
+                            <h2>Giỏ hàng</h2>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="breadcrumb__links">
                             <a href="./index.html">Trang chủ</a>
-                            <span>Shopping cart</span>
+                            <span>Giỏ hàng</span>
                         </div>
                     </div>
                 </div>
@@ -1538,131 +914,54 @@
                             <table>
                                 <thead>
                                 <tr>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
+                                    <th>Sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
                                     <th></th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="img/shop/cart/cart-1.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>T-shirt Contrast Pocket</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="img/shop/cart/cart-2.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Diagonal Textured Cap</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 32.50</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="img/shop/cart/cart-3.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 47.00</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="img/shop/cart/cart-4.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
-                                </tr>
+                                <tbody id="cart-body">
+
                                 </tbody>
                             </table>
                         </div>
+
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="continue__btn">
-                                    <a href="#">Continue Shopping</a>
+                                    <a href="#" onclick="switchTab('product')">Tiếp tục mua sắm</a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="continue__btn update__btn">
-                                    <a href="#"><i class="fa fa-spinner"></i> Update cart</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4">
                         <div class="cart__discount">
-                            <h6>Discount codes</h6>
+                            <h6>Mã giảm giá</h6>
                             <form action="#">
-                                <input type="text" placeholder="Coupon code">
-                                <button type="submit">Apply</button>
+                                <input type="text" placeholder="Nhập mã giảm giá">
+                                <button type="submit">Áp dụng</button>
                             </form>
                         </div>
                         <div class="cart__total">
-                            <h6>Cart total</h6>
+                            <h6>Tổng giỏ hàng</h6>
                             <ul>
-                                <li>Subtotal <span>$ 169.50</span></li>
-                                <li>Total <span>$ 169.50</span></li>
+                                <li>Tạm tính <span><output id="tamtinh" >0 </output> đ </span></li>
+                                <li>Thành tiền <span><output id="thanhtien">0 </output> đ</span></li>
                             </ul>
-                            <a href="#" class="primary-btn">Proceed to checkout</a>
+                            <a href="#" onclick="switchTab('thanhtoan')" class="primary-btn">Tiến hành thanh toán</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Shopping Cart Section End -->
+
     </div>
+
     <div id="blog" class="content-section">
 
         <!-- Breadcrumb Begin -->
@@ -1671,13 +970,13 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="breadcrumb__text">
-                            <h2>Blog</h2>
+                            <h2>Bài viết</h2>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="breadcrumb__links">
                             <a href="./index.html">Trang chủ</a>
-                            <span>Blog</span>
+                            <span>Bài viết</span>
                         </div>
                     </div>
                 </div>
@@ -1690,82 +989,79 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
+                        <!-- Bài viết 1 -->
                         <div class="blog__item">
                             <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-1.jpg">
                                 <div class="blog__pic__inner">
-                                    <div class="label">Recipes</div>
+                                    <div class="label">Công thức</div>
                                     <ul>
-                                        <li>By <span>James Myers</span></li>
-                                        <li>13 Nov 2020</li>
-                                        <li>112 Views</li>
+                                        <li>Bởi <span>James Myers</span></li>
+                                        <li>13 Tháng 11 2020</li>
+                                        <li>112 lượt xem</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="blog__item__text">
-                                <h2>Delivering Kisses And Miracles</h2>
-                                <p>Herbs are fun and easy to grow. When harvested they make even the simplest meal seem like
-                                    a gourmet delight. By using herbs in your cooking you can easily change the flavors of
-                                    your recipes in many different ways, according to which herbs you add...</p>
-                                <a href="#">READ MORE</a>
+                                <h2>Những nụ hôn và điều kỳ diệu</h2>
+                                <p>Thảo mộc rất dễ trồng và mang lại sự thú vị. Khi thu hoạch, chúng giúp các bữa ăn đơn giản trở nên hấp dẫn hơn. Bằng cách sử dụng thảo mộc, bạn có thể dễ dàng thay đổi hương vị món ăn tùy theo loại bạn thêm vào...</p>
+                                <a href="#">ĐỌC THÊM</a>
                             </div>
                         </div>
+                        <!-- Bài viết 2 -->
                         <div class="blog__item">
                             <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpg">
                                 <div class="blog__pic__inner">
-                                    <div class="label">Recipes</div>
+                                    <div class="label">Công thức</div>
                                     <ul>
-                                        <li>By <span>James Myers</span></li>
-                                        <li>13 Nov 2020</li>
-                                        <li>112 Views</li>
+                                        <li>Bởi <span>James Myers</span></li>
+                                        <li>13 Tháng 11 2020</li>
+                                        <li>112 lượt xem</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="blog__item__text">
-                                <h2>Make Grilling A Healthy Experience</h2>
-                                <p>Herbs are fun and easy to grow. When harvested they make even the simplest meal seem like
-                                    a gourmet delight. By using herbs in your cooking you can easily change the flavors of
-                                    your recipes in many different ways, according to which herbs you add...</p>
-                                <a href="#">READ MORE</a>
+                                <h2>Biến món nướng thành trải nghiệm lành mạnh</h2>
+                                <p>Thảo mộc rất dễ trồng và mang lại sự thú vị. Khi thu hoạch, chúng giúp các bữa ăn đơn giản trở nên hấp dẫn hơn. Bằng cách sử dụng thảo mộc, bạn có thể dễ dàng thay đổi hương vị món ăn tùy theo loại bạn thêm vào...</p>
+                                <a href="#">ĐỌC THÊM</a>
                             </div>
                         </div>
+                        <!-- Bài viết 3 -->
                         <div class="blog__item">
                             <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg">
                                 <div class="blog__pic__inner">
-                                    <div class="label">Recipes</div>
+                                    <div class="label">Công thức</div>
                                     <ul>
-                                        <li>By <span>James Myers</span></li>
-                                        <li>13 Nov 2020</li>
-                                        <li>112 Views</li>
+                                        <li>Bởi <span>James Myers</span></li>
+                                        <li>13 Tháng 11 2020</li>
+                                        <li>112 lượt xem</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="blog__item__text">
-                                <h2>Bbq Myths Getting You Down</h2>
-                                <p>Herbs are fun and easy to grow. When harvested they make even the simplest meal seem like
-                                    a gourmet delight. By using herbs in your cooking you can easily change the flavors of
-                                    your recipes in many different ways, according to which herbs you add...</p>
-                                <a href="#">READ MORE</a>
+                                <h2>Những lầm tưởng về BBQ khiến bạn nản lòng</h2>
+                                <p>Thảo mộc rất dễ trồng và mang lại sự thú vị. Khi thu hoạch, chúng giúp các bữa ăn đơn giản trở nên hấp dẫn hơn. Bằng cách sử dụng thảo mộc, bạn có thể dễ dàng thay đổi hương vị món ăn tùy theo loại bạn thêm vào...</p>
+                                <a href="#">ĐỌC THÊM</a>
                             </div>
                         </div>
+                        <!-- Bài viết 4 -->
                         <div class="blog__item">
                             <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-4.jpg">
                                 <div class="blog__pic__inner">
-                                    <div class="label">Recipes</div>
+                                    <div class="label">Công thức</div>
                                     <ul>
-                                        <li>By <span>James Myers</span></li>
-                                        <li>13 Nov 2020</li>
-                                        <li>112 Views</li>
+                                        <li>Bởi <span>James Myers</span></li>
+                                        <li>13 Tháng 11 2020</li>
+                                        <li>112 lượt xem</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="blog__item__text">
-                                <h2>Keep That Cooking Area Clean</h2>
-                                <p>Herbs are fun and easy to grow. When harvested they make even the simplest meal seem like
-                                    a gourmet delight. By using herbs in your cooking you can easily change the flavors of
-                                    your recipes in many different ways, according to which herbs you add...</p>
-                                <a href="#">READ MORE</a>
+                                <h2>Giữ khu vực nấu ăn luôn sạch sẽ</h2>
+                                <p>Thảo mộc rất dễ trồng và mang lại sự thú vị. Khi thu hoạch, chúng giúp các bữa ăn đơn giản trở nên hấp dẫn hơn. Bằng cách sử dụng thảo mộc, bạn có thể dễ dàng thay đổi hương vị món ăn tùy theo loại bạn thêm vào...</p>
+                                <a href="#">ĐỌC THÊM</a>
                             </div>
                         </div>
+
                         <div class="shop__pagination">
                             <a href="#">1</a>
                             <a href="#">2</a>
@@ -1773,16 +1069,20 @@
                             <a href="#"><span class="arrow_carrot-right"></span></a>
                         </div>
                     </div>
+
+                    <!-- Sidebar -->
                     <div class="col-lg-4">
                         <div class="blog__sidebar">
+                            <!-- Tìm kiếm -->
                             <div class="blog__sidebar__search">
                                 <form action="#">
-                                    <input type="text" placeholder="Enter keyword">
+                                    <input type="text" placeholder="Từ khóa tìm kiếm">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
+                            <!-- Mạng xã hội -->
                             <div class="blog__sidebar__item">
-                                <h5>Follow me</h5>
+                                <h5>Theo dõi chúng tôi</h5>
                                 <div class="blog__sidebar__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -1790,17 +1090,17 @@
                                     <a href="#"><i class="fa fa-instagram"></i></a>
                                 </div>
                             </div>
+                            <!-- Bài viết phổ biến -->
                             <div class="blog__sidebar__item">
-                                <h5>Popular posts</h5>
-
+                                <h5>Bài viết phổ biến</h5>
                                 <div class="blog__sidebar__recent">
                                     <a href="#" class="blog__sidebar__recent__item">
                                         <div class="blog__sidebar__recent__item__pic">
                                             <img src="img/blog/br-1.jpg" alt="">
                                         </div>
                                         <div class="blog__sidebar__recent__item__text">
-                                            <h4>Secret To Cooking Vegetables</h4>
-                                            <span>13 Nov 2020</span>
+                                            <h4>Bí quyết nấu rau củ ngon</h4>
+                                            <span>13 Tháng 11 2020</span>
                                         </div>
                                     </a>
                                     <a href="#" class="blog__sidebar__recent__item">
@@ -1808,8 +1108,8 @@
                                             <img src="img/blog/br-2.jpg" alt="">
                                         </div>
                                         <div class="blog__sidebar__recent__item__text">
-                                            <h4>Bbq Myths Getting You Down</h4>
-                                            <span>13 Nov 2020</span>
+                                            <h4>Những lầm tưởng về BBQ</h4>
+                                            <span>13 Tháng 11 2020</span>
                                         </div>
                                     </a>
                                     <a href="#" class="blog__sidebar__recent__item">
@@ -1817,8 +1117,8 @@
                                             <img src="img/blog/br-3.jpg" alt="">
                                         </div>
                                         <div class="blog__sidebar__recent__item__text">
-                                            <h4>Save Money The Crock Pot Way</h4>
-                                            <span>13 Nov 2020</span>
+                                            <h4>Tiết kiệm với nồi hầm chậm</h4>
+                                            <span>13 Tháng 11 2020</span>
                                         </div>
                                     </a>
                                     <a href="#" class="blog__sidebar__recent__item">
@@ -1826,8 +1126,8 @@
                                             <img src="img/blog/br-4.jpg" alt="">
                                         </div>
                                         <div class="blog__sidebar__recent__item__text">
-                                            <h4>Grilling Tips For The Dog Days Of Summer</h4>
-                                            <span>13 Nov 2020</span>
+                                            <h4>Mẹo nướng ngày hè nóng bức</h4>
+                                            <span>13 Tháng 11 2020</span>
                                         </div>
                                     </a>
                                     <a href="#" class="blog__sidebar__recent__item">
@@ -1835,35 +1135,37 @@
                                             <img src="img/blog/br-5.jpg" alt="">
                                         </div>
                                         <div class="blog__sidebar__recent__item__text">
-                                            <h4>Barbeque Techniques Two Methods To Consider</h4>
-                                            <span>13 Nov 2020</span>
+                                            <h4>2 kỹ thuật BBQ đáng thử</h4>
+                                            <span>13 Tháng 11 2020</span>
                                         </div>
                                     </a>
                                 </div>
                             </div>
+                            <!-- Danh mục -->
                             <div class="blog__sidebar__item">
-                                <h5>Categories</h5>
+                                <h5>Danh mục</h5>
                                 <div class="blog__sidebar__item__categories">
                                     <ul>
-                                        <li><a href="#">Repice <span>36</span></a></li>
-                                        <li><a href="#">Guides <span>18</span></a></li>
-                                        <li><a href="#">News <span>09</span></a></li>
-                                        <li><a href="#">Videos <span>12</span></a></li>
-                                        <li><a href="#">Trending <span>27</span></a></li>
+                                        <li><a href="#">Công thức <span>36</span></a></li>
+                                        <li><a href="#">Hướng dẫn <span>18</span></a></li>
+                                        <li><a href="#">Tin tức <span>09</span></a></li>
+                                        <li><a href="#">Video <span>12</span></a></li>
+                                        <li><a href="#">Xu hướng <span>27</span></a></li>
                                     </ul>
                                 </div>
                             </div>
+                            <!-- Đăng ký nhận tin -->
                             <div class="blog__sidebar__item">
-                                <h5>NEWsLETTeR</h5>
-                                <p>Subscribe to our newsletter and get our newest updates right on your inbox.</p>
+                                <h5>ĐĂNG KÝ NHẬN TIN</h5>
+                                <p>Hãy đăng ký để nhận thông tin mới nhất từ chúng tôi.</p>
                                 <form action="#">
-                                    <input type="text" placeholder="Your email">
+                                    <input type="text" placeholder="Email của bạn">
                                     <label for="agg">
-                                        I agree to the terms & conditions
+                                        Tôi đồng ý với các điều khoản
                                         <input type="checkbox" id="agg">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <button type="submit" class="site-btn">Subscribe</button>
+                                    <button type="submit" class="site-btn">Đăng ký</button>
                                 </form>
                             </div>
                         </div>
@@ -1872,7 +1174,9 @@
             </div>
         </section>
         <!-- Blog Section End -->
+
     </div>
+
     <div id="contac" class="content-section">
 
         <!-- Contact Section Begin -->
@@ -1988,24 +1292,168 @@
         <!-- Contact Section End -->
 
     </div>
+    <div id="thanhtoan" class="content-section">
+        <div class="breadcrumb-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__text">
+                            <h2>Thanh toán</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Thanh toán</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+        <!-- Checkout Section Begin -->
+        <section class="checkout spad">
+            <div class="container">
+                <div class="checkout__form">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-6">
+                                <h6 class="coupon__code"><span class="icon_tag_alt"></span> Có mã giảm giá? <a href="#">Nhấn vào đây</a> để nhập mã</h6>
+                                <h6 class="checkout__title">Thông tin thanh toán</h6>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="checkout__input">
+                                            <p>Họ<span>*</span></p>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="checkout__input">
+                                            <p>Tên<span>*</span></p>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout__input">
+                                    <p>Quốc gia<span>*</span></p>
+                                    <input type="text">
+                                </div>
+                                <div class="checkout__input">
+                                    <p>Địa chỉ<span>*</span></p>
+                                    <input type="text" placeholder="Số nhà, đường..." class="checkout__input__add">
+                                    <input type="text" placeholder="Căn hộ, tòa nhà, tầng (tùy chọn)">
+                                </div>
+                                <div class="checkout__input">
+                                    <p>Thành phố / Thị xã<span>*</span></p>
+                                    <input type="text">
+                                </div>
+                                <div class="checkout__input">
+                                    <p>Tỉnh / Bang<span>*</span></p>
+                                    <input type="text">
+                                </div>
+                                <div class="checkout__input">
+                                    <p>Mã bưu điện / ZIP<span>*</span></p>
+                                    <input type="text">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="checkout__input">
+                                            <p>Điện thoại<span>*</span></p>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="checkout__input">
+                                            <p>Email<span>*</span></p>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout__input__checkbox">
+                                    <label for="acc">
+                                        Tạo tài khoản?
+                                        <input type="checkbox" id="acc">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <p>Tạo tài khoản bằng cách nhập thông tin bên dưới. Nếu bạn đã có tài khoản, vui lòng đăng nhập ở đầu trang.</p>
+                                </div>
+                                <div class="checkout__input">
+                                    <p>Mật khẩu tài khoản<span>*</span></p>
+                                    <input type="text">
+                                </div>
+                                <div class="checkout__input__checkbox">
+                                    <label for="diff-acc">
+                                        Ghi chú đơn hàng, ví dụ: yêu cầu đặc biệt khi giao hàng
+                                        <input type="checkbox" id="diff-acc">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="checkout__input">
+                                    <p>Ghi chú đơn hàng<span>*</span></p>
+                                    <input type="text" placeholder="Ghi chú về đơn hàng của bạn, ví dụ: thời gian giao hàng.">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="checkout__order">
+                                    <h6 class="order__title">Đơn hàng của bạn</h6>
+                                    <div class="checkout__order__products">Sản phẩm <span>Tổng cộng</span></div>
+                                    <ul class="checkout__total__products">
+
+                                    </ul>
+                                    <ul class="checkout__total__all">
+                                        <li>Tạm tính <span><output id="tamtinh1"></output></span> đ</li>
+                                        <li>Tổng cộng <span><output id="tamtinh2"></output></span> đ</li>
+                                    </ul>
+                                    <div class="checkout__input__checkbox">
+                                        <label for="acc-or">
+                                            Tạo tài khoản?
+                                            <input type="checkbox" id="acc-or">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="checkout__input__checkbox">
+                                        <label for="payment">
+                                            Thanh toán khi nhận hàng
+                                            <input type="checkbox" id="payment">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="checkout__input__checkbox">
+                                        <label for="paypal">
+                                            Paypal
+                                            <input type="checkbox" id="paypal">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="site-btn">ĐẶT HÀNG</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <!-- Map Begin -->
     <div class="map">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-7">
                     <div class="map__inner">
-                        <h6>COlorado</h6>
+                        <h6>Đại Học Cần Thơ</h6>
                         <ul>
-                            <li>1000 Lakepoint Dr, Frisco, CO 80443, USA</li>
-                            <li>Sweetcake@support.com</li>
-                            <li>+1 800-786-1000</li>
+                            <li>Khu II, Đ. 3 Tháng 2, Xuân Khánh, Ninh Kiều, Cần Thơ</li>
+                            <li>dhct@ctu.edu.vn</li>
+                            <li>0292 3831 530</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="map__iframe">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4926.398935083062!2d105.77061529999999!3d10.0299337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zxJDhuqFpIGjhu41jIEPhuqduIFRoxqE!5e1!3m2!1svi!2s!4v1752545602575!5m2!1svi!2s" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
     <!-- Map End -->
@@ -2016,21 +1464,20 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__widget">
-                        <h6>WORKING HOURS</h6>
+                        <h6>Giờ mở cửa</h6>
                         <ul>
-                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>
-                            <li>Saturday: 10:00 am – 16:30 pm</li>
-                            <li>Sunday: 10:00 am – 16:30 pm</li>
+                            <li>Thứ 2 - Thứ 6: 08:00 am – 08:30 pm</li>
+                            <li>Thứ 7: 10:00 am – 16:30 pm</li>
+                            <li>Chủ nhật: 10:00 am – 16:30 pm</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#"><img src="img/logo.png" style="width: 80px" alt=""></a>
                         </div>
-                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore dolore magna aliqua.</p>
+                        <p>Đau buồn tạm thời vì yêu, thuộc về những người đang sống trong sự vĩ đại của sự học hỏi, nhưng đôi khi cũng rơi vào lao động và nỗi đau lớn lao.</p>
                         <div class="footer__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -2041,8 +1488,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__newslatter">
-                        <h6>Subscribe</h6>
-                        <p>Get latest updates and offers.</p>
+                        <h6>Đăng ký thông báo</h6>
+                        <p>Chúng tôi sẽ gửi thông báo sớm nhất đến bạn</p>
                         <form action="#">
                             <input type="text" placeholder="Email">
                             <button type="submit"><i class="fa fa-send-o"></i></button>
@@ -2056,17 +1503,13 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                           Được thực bởi nhóm: <i class="fa fa-heart" aria-hidden="true"></i>  <a href="https://colorlib.com" target="_blank"> 3 4 5</a>
                           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                       </p>
                   </div>
                   <div class="col-lg-5">
                     <div class="copyright__widget">
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Site Map</a></li>
-                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -2097,7 +1540,16 @@
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
 </body>
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- jQuery (phải trước Owl Carousel JS) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 <script>
     function switchTab(tabId) {
         // 1. Ẩn tất cả tab
@@ -2132,4 +1584,143 @@
         });
     }
 </script>
+<script>
+
+    const products = JSON.parse(document.getElementById('product-data').textContent);
+
+    const container = document.getElementById("product-list");
+    const home = document.getElementById("product-home");
+    const productContainer = document.getElementById("product-product");
+    container.innerHTML = products.map(p => `
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="product__item">
+      <div class="product__item__pic set-bg" style="background-image: url('${p.img}')">
+        <div class="product__label"><span>${p.category}</span></div>
+      </div>
+      <div class="product__item__text">
+        <h6><a href="#">${p.name}</a></h6>
+        <div class="product__item__price">${p.price}</div>
+        <div class="cart_add">
+          <a href="#" onclick="showProductDetail(${p.id})">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+`).join("");
+    home.innerHTML = products.map(p => `
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="product__item">
+      <div class="product__item__pic set-bg" style="background-image: url('${p.img}')">
+        <div class="product__label"><span>${p.category}</span></div>
+      </div>
+      <div class="product__item__text">
+        <h6><a href="#">${p.name}</a></h6>
+        <div class="product__item__price">${p.price} đ </div>
+        <div class="cart_add">
+          <a href="#" onclick="showProductDetail(${p.id})">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+`).join("");
+    productContainer.innerHTML = products.map(p => `
+        <div class="product__item">
+            <div class="product__item__pic set-bg" style="background-image: url('${p.img}')">
+                <div class="product__label">
+                    <span>${p.category}</span>
+                </div>
+            </div>
+            <div class="product__item__text">
+                <h6><a href="#">${p.name}</a></h6>
+                <div class="product__item__price">${p.price} đ</div>
+                <div class="cart_add">
+                    <a href="#" onclick="switchTab('thongtin'); showProductDetail(${p.id})">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    `).join("");
+
+    // Nếu bạn dùng Owl Carousel thì cần gọi lại khởi tạo sau khi innerHTML
+    $('.related__products__slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        items: 4
+    });
+    function showProductDetail(productId) {
+        const products = JSON.parse(document.getElementById('product-data').textContent);
+        const p = products.find(item => item.id === productId);
+        if (!p) return;
+
+        document.querySelector(".product__details__img .big_img").src = p.img;
+        document.querySelector(".product__details__thumb img").src = p.img;
+        document.querySelector(".product__details__thumb img").setAttribute("data-imgbigurl", p.img);
+        document.querySelector(".product__label").innerText = p.category;
+        document.querySelector(".product__details__text h4").innerText = p.name;
+        document.querySelector(".product__details__text h5").innerText = p.price;
+        document.querySelector(".product__details__text p").innerText = p.description;
+        document.querySelector(".product__details__text ul li:nth-child(1) span").innerText = p.sku;
+        document.querySelector(".product__details__text ul li:nth-child(2) span").innerText = p.category;
+        document.querySelector(".product__details__text ul li:nth-child(3) span").innerText = p.tags;
+        document.getElementById("idsp").value=productId;
+        switchTab('thongtin');
+    }
+    function themgiohang() {
+        dem += 1;
+        const products = JSON.parse(document.getElementById('product-data').textContent);
+        const id = document.getElementById("idsp").value;
+        const soluong = document.getElementById("soluong").value;
+        const p = products.find(item => item.id == id);
+
+        if (!p) {
+            console.warn("Không tìm thấy sản phẩm với ID:", id);
+            return;
+        }
+    const  tinh = parseFloat(p.price)*soluong;
+// Chuyển giá thành số
+        let rawPrice = p.price.replace(/[^\d,\.]/g, '').replace(',', '.');
+        let priceNumber = parseFloat(rawPrice);
+
+        const cartBody = document.getElementById("cart-body");
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+    <td class="product__cart__item">
+        <div class="product__cart__item__pic">
+            <img src="${p.card}" alt="">
+        </div>
+        <div class="product__cart__item__text">
+            <h6>${p.name}</h6>
+            <h5>${priceNumber.toFixed(2)} đ</h5>
+        </div>
+    </td>
+    <td class="quantity__item">
+        <div class="quantity">
+            <div class="pro-qty">
+                <input type="text" value="${soluong}">
+            </div>
+        </div>
+    </td>
+    <td class="cart__price">${tinh.toFixed(2)} đ</td>
+    <td class="cart__close"><span class="icon_close"></span></td>
+`;
+
+        cartBody.appendChild(tr);
+        const tien = document.getElementById("tamtinh").value;
+        const thanhtien = parseFloat(tien)+parseFloat(tinh);
+        document.getElementById("tamtinh").value=thanhtien;
+        document.getElementById("tamtinh1").value=thanhtien;
+        document.getElementById("tamtinh2").value=thanhtien;
+        document.getElementById("thanhtien").value=thanhtien;
+        document.getElementById("gio").value=dem;
+        document.getElementById("tien").value=thanhtien;
+        const ul = document.querySelector('.checkout__total__products');
+        const li = document.createElement('li');
+        li.innerHTML = `<samp>${dem}.</samp> ${p.name} <span>${tinh}</span>`;
+        ul.appendChild(li);
+    }
+
+</script>
+
+
 </html>
